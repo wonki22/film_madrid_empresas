@@ -1,6 +1,8 @@
 import pandas as pd
 
-data = pd.read_json("empresas.json", typ=series)
+last_update = "20210803"
+
+data = pd.read_json("empresas_" + last_update + ".json", typ=pd.core.series)
 
 df = pd.json_normalize(data['empresas'])
 
