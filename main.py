@@ -1,7 +1,8 @@
 import pandas as pd
+from os import system
 
-data = pd.read_json("empresas.json", typ=series)
+system('node dump_empresas.js');
 
-df = pd.json_normalize(data['empresas'])
+data = pd.read_json("empresas.json")
 
-df.to_excel('empresas.xlsx', index=False)
+data.to_excel('empresas.xlsx')
