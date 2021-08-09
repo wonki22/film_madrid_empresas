@@ -1,9 +1,8 @@
 import pandas as pd
+from os import system
 
-last_update = "20210803"
+system('node dump_empresas.js');
 
-data = pd.read_json("empresas_" + last_update + ".json", typ=pd.core.series)
+data = pd.read_json("empresas.json")
 
-df = pd.json_normalize(data['empresas'])
-
-df.to_excel('empresas.xlsx', index=False)
+data.to_excel('empresas.xlsx')
