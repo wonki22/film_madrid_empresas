@@ -5,4 +5,4 @@ system('node dump_empresas.js');
 
 data = pd.read_json("empresas.json")
 
-data.to_excel('empresas.xlsx')
+data.to_excel('empresas.xlsx', index=False)
